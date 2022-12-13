@@ -1,0 +1,25 @@
+.ant-layout {
+  background: transparent;
+}
+.ant-layout-header {
+  background-color: #003572 !important;
+  z-index: 2;
+  box-shadow: 2px 6px 20px #14061bb0;
+  position: fixed;
+  width: 100vw;
+  padding: 0;
+}
+
+.ant-layout-content {
+  background: transparent;
+  min-height: calc(100vh - 128px);
+  margin-top: 64px;
+  overflow-x: hidden;
+}
+
+.header-wrapper {
+  text-align: center;
+  color: #e4e4e4;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
