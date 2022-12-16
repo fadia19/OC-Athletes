@@ -1,0 +1,53 @@
+.medals-wrapper {
+  padding: 0.75rem;
+  .medals-header {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #b26d60;
+    line-height: 2rem;
+    text-transform: uppercase;
+  }
+  .medals-listing {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0.5rem 0;
+
+    .game-name {
+      font-size: 1.3rem;
+      color: #494949;
+      padding-top: 0.5rem;
+      font-style: italic;
+    }
+    .medal {
+      top: 0.5rem;
+      position: relative;
+      margin-right: 1.25rem;
+      svg {
+        font-size: 1.7rem;
+      }
+
+      &.gold-medal {
+        svg path {
+          fill: #f9b101;
+        }
+      }
+
+      &.silver-medal {
+        svg path {
+          fill: #c0c0c0;
+        }
+      }
+      &.bronze-medal {
+        svg path {
+          fill: #cd7f32;
+        }
+      }
+    }
+    .medal-score {
+      font-weight: 600;
+      font-size: 1rem;
+      padding-right: 0.2rem;
+    }
+  }
+}
