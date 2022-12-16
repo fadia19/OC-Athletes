@@ -1,4 +1,4 @@
-import { IAthlete } from "../models/athletes";
+import { IAthlete, IAthleteMedals } from "../models/athletes";
 
 export const athlete: IAthlete = {
   athlete_id: "1234",
@@ -33,3 +33,28 @@ export const athlete: IAthlete = {
   },
   globalScore: 0,
 };
+
+export const athleteMedalsMock: IAthleteMedals[] = [
+  {
+    athlete_id: "1",
+    game_id: 2,
+    year: 2022,
+    city: "Tokyo",
+    medals: {
+      gold: 2,
+      silver: 4,
+      bronze: 1,
+    },
+  },
+  {
+    athlete_id: "1",
+    game_id: 4,
+    year: 2022,
+    city: "Rio de Janeiro",
+    medals: {
+      gold: 5,
+      silver: 1,
+      bronze: 1,
+    },
+  },
+];

@@ -22,3 +22,11 @@ export interface IAthlete {
   height: number;
   globalScore: number;
 }
+
+export interface IAthleteMedals {
+  athlete_id: string;
+  game_id: number;
+  year: number;
+  city: string;
+  medals: IAthleteResults;
+}
