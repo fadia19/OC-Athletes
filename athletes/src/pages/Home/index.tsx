@@ -1,5 +1,5 @@
-import AthletesList from "../../components/AthletesList/AthletesList";
+import GamesList from "../../components/GamesList";
 
-const Home = () => <AthletesList />;
+const Home = () => <GamesList />;
 
 export default Home;

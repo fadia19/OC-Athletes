@@ -28,7 +28,7 @@ export const fetchAthleteMedalsAPI = async (
   athleteId: string
 ): Promise<IAthleteMedals[] | IErrorResponse | any> => athleteMedalsMock;
 // try {
-//   const url = `${ATHLETE_SERVICE_URL}/${athleteId}/medals`;
+//   const url = `${ATHLETE_SERVICE_URL}/medals?athleteId=${athleteId}`;
 //   const response = await axios.get(url);
 //   const { status, statusText, data } = response;
 // if (status === 200) {
