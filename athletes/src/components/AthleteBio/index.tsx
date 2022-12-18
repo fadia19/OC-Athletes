@@ -1,4 +1,5 @@
 import { Col, Row } from "antd";
+import ReactMarkdown from "react-markdown";
 import "./AthleteBio.scss";
 
 type Props = {
@@ -12,8 +13,7 @@ const AthleteBio = ({ bio }: Props) => (
       xs={{ span: 24 }}
       className="bio-wrapper"
     >
-      <h3 className="section-header">Bio:</h3>
-      <p className="athlete-bio">{bio}</p>
+      <ReactMarkdown className="athlete-bio">{bio}</ReactMarkdown>
     </Col>
   </Row>
 );
