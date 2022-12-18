@@ -64,7 +64,7 @@ const retrieveGamesList = () => {
     });
     const AthletesPhotos = getAthletesPhotos(photoIDs).data;
     const gameAthletesWithPhotos = gameAthletes.map((athlete) => {
-      const athletePhoto = AthletesPhotos.filter(
+      const athletePhoto = AthletesPhotos.find(
         (photo) => photo.photo_id === athlete.photo_id
       );
       return {
