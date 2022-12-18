@@ -1,0 +1,36 @@
+.carousel {
+  height: 300px;
+  width: 60%;
+  background: #ae6474;
+  margin: 2rem auto 3rem auto;
+
+  .carousel-indicators [data-bs-target] {
+    background-color: #fff;
+  }
+
+  .empty-message {
+    display: block;
+    margin: 7rem auto;
+    float: none;
+    width: 75%;
+    text-align: center;
+    color: #2e2e2e;
+    font-size: 1.5rem;
+  }
+
+  .athlete-photo {
+    display: block;
+    width: auto;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .athlete-name {
+    text-align: center;
+    font-size: 1.7rem;
+    color: #4b4b4b;
+    margin: 0.5rem 0;
+  }
+}

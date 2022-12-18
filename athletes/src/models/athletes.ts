@@ -6,7 +6,7 @@ export interface IAthleteResults {
 
 export interface IAthletePhoto {
   photo_id: number;
-  photo?: Blob;
+  photo: any;
   mime_type: string;
 }
 
@@ -20,7 +20,6 @@ export interface IAthlete {
   score: IAthleteResults;
   weight: number;
   height: number;
-  globalScore: number;
 }
 
 export interface IAthleteMedals {

@@ -1,11 +1,10 @@
-import { athlete } from "../../api/athlete.mock";
 import { IAction } from "../../models/shared";
 import * as actionTypes from "../constants/athletes";
 
 const initialState = {
   gamesList: [],
   isFetchingGamesList: false,
-  selectedAthlete: athlete,
+  selectedAthlete: null,
   selectedAthleteMedals: [],
   isFetchingAthleteMedals: false,
 };

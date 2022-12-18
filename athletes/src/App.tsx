@@ -2,6 +2,7 @@ import { ConfigProvider } from "antd";
 import { connect } from "react-redux";
 import { Navigate, Route, Routes } from "react-router-dom";
 import "./App.scss";
+import "bootstrap/dist/css/bootstrap.min.css";
 import BaseLayout from "./Layout/BaseLayout";
 import { IAthlete } from "./models/athletes";
 import AthleteDetails from "./pages/AthleteDetails";
@@ -30,10 +31,14 @@ const App = ({ selectedAthlete }: Props) => (
       <Route
         path="/athlete"
         element={
-          <BaseLayout
-            component={<AthleteDetails />}
-            pageTitle={`${selectedAthlete?.name} ${selectedAthlete?.surname} Details`}
-          />
+          selectedAthlete ? (
+            <BaseLayout
+              component={<AthleteDetails />}
+              pageTitle={`${selectedAthlete?.name} ${selectedAthlete?.surname} Details`}
+            />
+          ) : (
+            <Navigate replace to="/home" />
+          )
         }
       />
     </Routes>

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { Dispatch } from "redux";
 import { IAthlete, IAthleteMedals } from "../../models/athletes";
 import { fetchAthleteMedals } from "../../redux/actions/athletes";
+import { convertBufferToImage } from "../../utils/helpers";
 import AthleteBio from "../AthleteBio";
 import AthleteMedals from "../AthleteMedals";
 import "./AthleteInfo.scss";
@@ -22,14 +23,20 @@ const AthleteInfo = ({
   isFetchingAthleteMedals,
 }: Props) => {
   useEffect(() => {
-    fetchAthleteMedalsProp(selectedAthlete.athlete_id);
+    if (selectedAthlete) {
+      fetchAthleteMedalsProp(selectedAthlete.athlete_id);
+    }
   }, []);
 
   return (
     <div className="athlete-info-wrapper">
       <Row>
         <Col md={{ span: 8 }} sm={{ span: 12 }} xs={{ span: 24 }}>
-          <img src="/photo_oc.jpeg" alt="athlete" className="athlete-photo" />
+          <img
+            src={convertBufferToImage(selectedAthlete.athletePhoto)}
+            alt="athlete"
+            className="athlete-photo"
+          />
         </Col>
         <Col md={{ span: 14, offset: 2 }} sm={{ span: 12 }} xs={{ span: 24 }}>
           <div className="athlete-personal-info">

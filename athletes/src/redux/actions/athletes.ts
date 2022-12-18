@@ -1,11 +1,14 @@
 import { message } from "antd";
 import { Dispatch } from "redux";
+import {
+  sortAthletesByGlobalScore,
+  sortGamesByDate,
+} from "../../utils/helpers";
 import { IAthlete, IAthleteMedals } from "../../models/athletes";
 import { IAction } from "../../models/shared";
 import * as actionTypes from "../constants/athletes";
 import { IGame } from "../../models/games";
 import { fetchAthleteMedalsAPI, fetchGamesListAPI } from "../../api/athletes";
-import { sortGamesByDate } from "../../utils/helpers";
 
 export const setSelectedAthlete = (athlete: IAthlete): IAction => ({
   type: actionTypes.SET_SELECTED_ATHLETE,
@@ -43,7 +46,11 @@ export const fetchGamesList =
     dispatch(fetchGamesListBegin());
     try {
       const gamesList = await fetchGamesListAPI();
-      dispatch(fetchGamesListSuccess(sortGamesByDate(gamesList)));
+      const sortedGames = sortGamesByDate(gamesList).map((game) => ({
+        ...game,
+        athletes: sortAthletesByGlobalScore(game.athletes),
+      }));
+      dispatch(fetchGamesListSuccess(sortedGames));
     } catch (error: any) {
       dispatch(fetchGamesListSuccess(error.message));
       message.error("Unable to load games list. Please try again later.");
