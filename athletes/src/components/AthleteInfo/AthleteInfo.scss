@@ -1,27 +1,32 @@
-.athlete-info-wrapper {
-  .athlete-photo {
-    padding: 0.75rem;
-    width: 100%;
-    border-radius: 2rem;
-  }
+.athlete-info-card {
+  border: 1px solid #e0dddd;
+  box-shadow: 1px 2px 2px #c4bebed4;
 
-  .athlete-personal-info {
-    padding: 0.75rem;
+  .athlete-info-wrapper {
+    .athlete-photo {
+      padding: 0.75rem;
+      width: 100%;
+      border-radius: 2rem;
+    }
 
-    .info-wrapper {
-      margin-bottom: 0.5rem;
-      .field-label {
-        font-size: 1.4rem;
-        color: #7f7f7f;
-        font-style: italic;
-      }
+    .athlete-personal-info {
+      padding: 0.75rem;
 
-      .field-value {
-        color: #255ea1;
-        font-weight: 400;
-        line-height: 2rem;
-        font-size: 1.4rem;
-        margin-left: 0.5rem;
+      .info-wrapper {
+        margin-bottom: 0.5rem;
+        .field-label {
+          font-size: 1.4rem;
+          color: #7f7f7f;
+          font-style: italic;
+        }
+
+        .field-value {
+          color: #255ea1;
+          font-weight: 400;
+          line-height: 2rem;
+          font-size: 1.4rem;
+          margin-left: 0.5rem;
+        }
       }
     }
   }

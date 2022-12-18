@@ -1,6 +1,6 @@
 .carousel {
   height: 300px;
-  width: 60%;
+  width: 40%;
   background: #ae6474;
   margin: 2rem auto 3rem auto;
 
@@ -32,5 +32,11 @@
     font-size: 1.7rem;
     color: #4b4b4b;
     margin: 0.5rem 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .carousel {
+    width: 100%;
   }
 }
